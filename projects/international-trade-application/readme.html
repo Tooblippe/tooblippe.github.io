@@ -2,30 +2,7 @@
 <html>
   <head>
     <style>
-      @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-    font-style: italic, oblique;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-    font-weight: bold;
-    font-style: italic, oblique;
-  }
 
-  body {
-    font-family: "Computer Modern", sans-serif;
-  }
 
 
       /*! ADAPTED
@@ -506,12 +483,42 @@
 <!--      </nav>-->
       <article id="main" class="content">
         <p><img src="assets/case-slide-trade.PNG" alt="trade"></p>
-<h4 id="development-of-international-trade-application-that-is-used-by-clients-and-goverments-in-south-africa%2C-australia%2C-new-zealand-and-eurpope%2C">Development of international trade application that is used by clients and goverments in South-Africa, Australia, New-Zealand and Eurpope, <a class="heading-anchor-permalink" href="#development-of-international-trade-application-that-is-used-by-clients-and-goverments-in-south-africa%2C-australia%2C-new-zealand-and-eurpope%2C">#</a></h4>
+<h3 id="development-of-international-trade-application-that-is-used-by-clients-and-governments-in-south-africa%2C-australia%2C-new-zealand-and-europe%2C">Development of international trade application that is used by clients and governments in South-Africa, Australia, New-Zealand and Europe, <a class="heading-anchor-permalink" href="#development-of-international-trade-application-that-is-used-by-clients-and-governments-in-south-africa%2C-australia%2C-new-zealand-and-europe%2C">#</a></h3>
 <h1 id="background">Background <a class="heading-anchor-permalink" href="#background">#</a></h1>
+<p>An internationally acclaimed Economist developed an international trade application for local and international clients.
+The initial application was shipped as a <code>Qlik (Tableau)</code> package. The prohibitive licencing costs, significant effort to update
+as well as the extremely large datasets made this distribution model difficult. The application was ported to a web application.</p>
 <h1 id="solution-provided">Solution provided <a class="heading-anchor-permalink" href="#solution-provided">#</a></h1>
+<p>A specialised web application was developed using the Vuejs framework for the front-end development and Django as the backed.
+The solution is connected to a managed Postgres database and hosted via a load balancer.</p>
 <h1 id="unique-project-attributes">Unique project attributes <a class="heading-anchor-permalink" href="#unique-project-attributes">#</a></h1>
+<p>The Django backend primary deals with complex report generation based on a specific set of parameters and study boundaries
+defined by the user using the front end application. The application needed these outputs to be in the main Microsoft Office
+formats due to client requirements.</p>
+<h3 id="specialised-word-report-generation">Specialised Word report generation <a class="heading-anchor-permalink" href="#specialised-word-report-generation">#</a></h3>
+<p>One of the main strengths of the application is the automatic generation of Microsoft Word reports. PDF reports would
+not be sufficient since it is mostly non editable. The clients would obtain a near 100% populated Word report for
+the specific study that was conducted and only has to do minimal editing for specific use cases. A template system was
+developed that allows for the population of a present Word template as well as writing Pandas Data frames directly into
+embedded Word graphs. Each word document will have the client template and corporate identity applied to the document. This includes</p>
+<ul>
+<li>dynamic image insertion</li>
+<li>table creation and population</li>
+<li>live and linked graphs</li>
+<li>dynamic addition of reporting sections based on number of report entities</li>
+<li>dynamic interpretation of results leads to specific text updates in the report</li>
+</ul>
+<h3 id="specialised-powerpoint-generation">Specialised PowerPoint generation <a class="heading-anchor-permalink" href="#specialised-powerpoint-generation">#</a></h3>
+<p>The application also generates publication ready PowerPoint slides with the client template and corporate identity applied to
+the slide deck.</p>
+<h3 id="specialised-excel-generation">Specialised Excel generation <a class="heading-anchor-permalink" href="#specialised-excel-generation">#</a></h3>
+<p>The application also allows for the offloading of large datasets into a pre-set Excel analysis environment. This enables
+more advanced users to fine tune a specific economic study.</p>
+<h2 id="timeframe-and-budget">Timeframe and Budget <a class="heading-anchor-permalink" href="#timeframe-and-budget">#</a></h2>
+<p>The project was developed over a period of two years with a Budget of <code>R1,500,000</code>.
+The appication is stull under development and more features are introduced during a <code>6 week</code> cycle.</p>
 <h1 id="tools-employed">Tools Employed <a class="heading-anchor-permalink" href="#tools-employed">#</a></h1>
-<h2 id="fronend">Fronend <a class="heading-anchor-permalink" href="#fronend">#</a></h2>
+<h2 id="frontend">Frontend <a class="heading-anchor-permalink" href="#frontend">#</a></h2>
 <ul>
 <li>vuejs</li>
 <li>vuex</li>
@@ -522,6 +529,7 @@
 <ul>
 <li>Python</li>
 <li>Django</li>
+<li>pandas</li>
 <li>postgres</li>
 </ul>
 <h2 id="deployment-platform">Deployment platform <a class="heading-anchor-permalink" href="#deployment-platform">#</a></h2>
